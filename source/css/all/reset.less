@@ -78,7 +78,7 @@ body {
 -----------------------------------------------------------------------------*/
 .middle {
 	width: 100%;
-	padding: 0 0 27px;
+	padding: 0 0 @footer;
 	position: relative;
 }
 .middle:after {
@@ -89,8 +89,14 @@ body {
 .container {
 	width: 100%;
 	float: left;
-	// overflow: hidden;
+	overflow: hidden;
 }
+.content {
+	padding: 0 0 0 270px;
+}
+
+
+
 sup {
 	color: @red;
 }
