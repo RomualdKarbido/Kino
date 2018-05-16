@@ -1,1 +1,3 @@
-kino
+# npm i
+# gulp
+

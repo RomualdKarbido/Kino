@@ -1,0 +1,55 @@
+.breadcrumbs {
+	height: 42px;
+	&__wrap {
+		padding: 11px 30px;
+		font-style: italic;
+		font-size: 14px;
+		.clearfix;
+	}
+	&__item {
+		float: left;
+		&:after {
+			content: ' / ';
+			margin-right: 5px;
+			margin-left: 3px;
+		}
+		&:first-child {
+			position: relative;
+			padding-left: 23px;
+			&:before {
+				content: '';
+				background: url(../img/icon_home.png) no-repeat;
+				display: inline-block;
+				width: 17px;
+				height: 15px;
+				margin-right: 5px;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+
+		}
+		&:last-child {
+			&:after {
+				display: none;
+			}
+		}
+		&_red {
+			color: @red;
+			font-style: normal;
+			&:first-child {
+				padding-left: 0;
+				&:before {
+					background: none;
+				}
+			}
+			&:last-child {
+				font-size: 18px;
+				font-weight: bold;
+			}
+		}
+	}
+	&_red {
+		margin-top: 20px;
+	}
+}

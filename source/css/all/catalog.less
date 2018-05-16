@@ -1,0 +1,98 @@
+.catolog {
+	
+	padding: 11px 30px;
+	box-sizing: border-box;
+	.clearfix;
+    &__left {
+    	float: left;
+    	box-sizing: border-box;
+    	width: 50%;
+    	padding-right: 60px;
+    	
+    }
+    &__right  {
+    	float: right;
+    	box-sizing: border-box;
+    	width: 50%;
+    	background: url(../img/sep-shadow.png) no-repeat;
+    	background-position: left center;
+    	background-size: 12px 100%;
+    	min-height: 300px;
+    	padding-left: 30px;
+    	position: relative;
+
+    	
+    }
+    &__title {
+    	font-size: 16px;
+    	font-weight: 600;
+    	color: @blue;
+    	padding-left: 35px;
+    	position: relative;
+    	min-height: 32px;
+    	margin-bottom: 10px;
+    	line-height: 29px;
+    	&_my {
+			&:before {
+				content: '';
+				background: url(../img/my_prod.png) no-repeat;
+				width: 25px;
+				height: 26px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+    	}
+    	&_filter {
+			&:before {
+				content: '';
+				background: url(../img/icon_filtr.png) no-repeat;
+				width: 24px;
+				height: 24px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+    	}
+    }
+    &__block {
+    	&-title {
+    		margin-bottom: 5px;
+    		font-size: 14px;
+    	}
+    	&-box {
+    		.clearfix;
+    		box-sizing: border-box;
+    		margin-bottom: @sp;
+    	}
+    	&-btn {
+    		margin-top: 30px;
+    		
+    	}
+    }
+
+    &__redbox {
+    	background: @red;
+    	color: white;
+    	position: fixed;
+    	width: 150px;
+    	border: 2px solid red;
+    	z-index: 1000;
+    	top: 45%;
+    	left: -78px;
+    	padding: 10px 20px;
+    	font-size: 18px; 
+    	line-height: 1;
+		transform: rotate(-90deg);
+		cursor: pointer;
+    	&-text {
+    	
+    	}
+    	i {
+    		position: absolute;
+    		top: 10px;
+    		right: 10px;
+    		font-size:22px;
+    	}
+    }
+}

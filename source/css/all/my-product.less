@@ -1,0 +1,107 @@
+.my-product {
+	margin-bottom: 25px;
+	.clearfix;
+	&.active {
+		.my-product {
+			&__list {
+				display: block;
+				overflow: auto;
+    			max-height: 250px;
+			}
+			&__title {
+				background: none;
+				&:before {
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
+	&__list {
+		box-sizing: border-box;
+		border: 1px solid #cccccc;
+		border-top: none;
+		margin-bottom: 25px;
+		padding: 3px 0;
+		display: none;
+		.clearfix;
+	}
+	&__title {
+		font-weight: 600;
+		padding: 10px 15px;
+		font-size: 14px;
+		color: #333333;
+		border: 1px solid #cccccc;
+		position: relative;
+		background: #f2f2f2;
+		box-sizing: border-box;
+		line-height: 1;
+		&:before {
+			content: "\F140";
+			font-family: "Material Design Icons";
+			position: absolute;
+			right: 10px;
+			top: 0px;
+			width: 28px;
+			
+			color: @red;
+			font-size: 28px;
+			font-weight: normal;
+			line-height: 35px;
+			text-align: center;
+			cursor: pointer;
+			transition: 0.2s all;
+			height: 35px;
+		}
+
+	}
+	&__item {
+		font-size: 14px;
+		text-decoration: none;
+		padding: 6px 35px 6px 23px;
+		box-sizing: border-box;
+		display: block;
+		transition: all 0.2s;
+		&:before {
+			content: '';
+			width: 13px;
+			background: url(../img/icon_docs.png) no-repeat;
+			margin-right: 3px;
+			height: 13px;
+
+			display: inline-block;
+
+		}
+		&:hover {
+			opacity: 0.6;
+		}
+		.clearfix;
+		&-text {
+			display: inline-block;
+			color: #333333;
+			margin-right: 5px;
+		}
+		&-name {
+			display: inline-block;	
+			color: #666666;
+			margin-right: 5px;		
+			font-style: italic;
+		}
+		&-region {
+			display: inline-block;	
+			margin-right: 5px;	
+			font-size: 12px;
+			color: white;
+			background: #7d9bae;
+			padding: 1px 7px 2px;
+			border-radius: 20px;
+			line-height: 1;
+
+		}
+		&-new {
+			display: inline-block;
+			font-weight: 600;
+			color: @red;
+		}
+	}
+
+}

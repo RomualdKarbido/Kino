@@ -1,0 +1,88 @@
+.preloader {
+	width: 100px;
+	height: 100px;
+	animation: vizible  .3s;
+	// animation: rotate  6s infinite linear;
+
+	&__wrap {
+		position: fixed;
+		z-index: 10000;
+		background: rgba(255, 255, 255, 0.9);
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: flex;
+		align-items:center;
+		justify-content: center;
+		height: 100vh;
+		display: none;
+		&.active {
+			display: flex;
+			animation: preloader-backdor 1s;
+		}
+		&.active.closed {
+			animation: preloader-backdor-close 1s;
+		}
+		
+	}
+	
+	.donut-segment-1 {
+		animation: preloader linear 3s infinite;
+	}
+	
+	
+	&__on {
+		cursor: pointer;
+		font-size: 20px;
+		padding: 20px;
+		border: 2px solid @red;
+		margin: 30px auto;
+		float: left;
+		&:hover {
+			color: @red;
+		}
+	}
+}
+
+
+@keyframes preloader {
+  from {
+    stroke-dasharray: 0 100;
+    stroke-dashoffset: 225;
+  }
+  
+  to {
+   stroke-dasharray: 100 0; 
+   stroke-dashoffset: 25;
+  }
+}
+
+@keyframes preloader-backdor {
+	from {
+    	opacity: 0;
+  	}
+  
+  	to {
+   		opacity: 1;
+  	}
+}
+@keyframes preloader-backdor-close {
+	from {
+    	opacity: 1;
+  	}
+  
+  	to {
+   		opacity: 0; 
+  	}
+}
+
+// @keyframes rotate {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+   
+//     transform: rotate(360deg);
+//   }
+// }

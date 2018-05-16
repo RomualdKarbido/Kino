@@ -1,0 +1,105 @@
+.header {
+	background: white;
+	height: 87px;
+	box-shadow: 1px 2px 19px -4px rgba(0,0,0,0.18);
+	// margin-bottom: 23px;
+	padding: @sp @sp*2;
+	box-sizing: border-box;
+	&__box {
+		box-sizing: border-box;
+		float: left;
+		&_logo {
+			min-width: 400px;
+			&-link {
+				width: 45px;
+				height: 55px;
+				display: block;
+				float: left;
+				margin-right: 20px;
+				border-right: 1px solid #babbbb;
+				padding-right: 20px;
+				background: url(../img/logo-luk.png) no-repeat;
+				background-position: 0 0;
+			}
+			&-text {
+				color: @red;
+				text-transform: uppercase;
+				font-weight: bold;
+				font-size: 20px;
+				float: left;
+				line-height: 1.1;
+				margin-top: 5px;
+
+			}
+		}
+		&_user {
+			float: left;
+			width: 295px;
+			text-align: center;
+			padding-top: 15px;
+			&-wrap {
+				margin:  0 auto;
+				.clearfix;
+				
+				display: inline-block;
+				height: 100%;
+
+
+			}
+			&-ico {
+				padding-right: 10px;
+				width: 20px;
+				height: 20px;
+				background: url(../img/icon_user.png) no-repeat;
+				float: left;
+				padding-top: 4px;
+				float: left;
+			}
+			&-name {
+				float: left;
+				margin-top: 1px;
+			}
+		}
+		&_search {
+			padding-top: 13px;
+			&-input, &-full {
+				width: 180px;
+				float: left;
+				position: relative;				
+				&:first-child {
+					margin-right: 20px;
+				}
+			}
+		}
+		&_menu {
+			width: 220px;
+			float: right;
+			padding-top: 13px;
+			&-icon {
+				width: 23px;
+				height: 23px;
+				float: left;
+				margin-right: 8px;
+				margin-top: 2px;
+				cursor: pointer;
+				&:nth-child(1) {
+					background: url(../img/ico-1.png) no-repeat;
+				}
+				&:nth-child(2) {
+					background: url(../img/ico-2.png) no-repeat;
+				}
+				&:nth-child(3) {
+					background: url(../img/ico-3.png) no-repeat;
+				}
+			}
+			&-menu {
+				background: url(../img/menu-red.png) no-repeat;
+				width: 31px;
+				height: 31px;
+				float: right;
+				cursor: pointer;
+			}
+		}
+
+	}
+}

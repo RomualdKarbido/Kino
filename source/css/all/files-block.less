@@ -1,0 +1,79 @@
+.files-block {
+	margin-top: 25px;
+	.clearfix;
+	&__title {
+		color: @blue;
+	    margin-bottom: 15px;
+		font-weight: bold;
+		font-size: 16px;
+	}
+	&__list {
+		margin-bottom: @sp;
+	}
+	&__item {
+		&-ico {
+			width: 24px;
+			height: 24px;
+			display: inline-block;
+			position: relative;
+			top: 5px;
+			margin-right: 3px;
+			&_pdf {
+				background: url(/img/icon-pdf.png) no-repeat;
+				background-position: center;
+			}
+		}
+		&-name {
+			text-decoration: none;
+			color: @blue;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&__add {
+		margin-bottom: @sp;
+		.clearfix;
+		.input {
+			float: left;
+			width: calc(~"100% - 165px");
+			box-sizing: border-box;
+			line-height: 32px;
+			height: 32px;
+			background: white;
+			font-size: 13px;
+			&::-webkit-input-placeholder {
+				font-style: italic;
+				color: #999999;
+				font-weight: normal;
+			}
+			&::-moz-placeholder {
+				font-style: italic;
+				color: #999999;
+				font-weight: normal;
+				}
+			&:-moz-placeholder {
+				font-style: italic;
+				color: #999999;
+				font-weight: normal;
+			}
+				
+			&:-ms-input-placeholder {
+				font-style: italic;
+				color: #999999;
+				font-weight: normal;
+			}
+		}
+		.btn_white {
+			
+			float: right;
+			background: url(/img/icon_add_file.png) no-repeat;
+			background-position: 120px 8px;
+			width: 150px;
+			box-sizing: border-box;
+			&:hover {
+				color: @red;
+			}
+		}
+	}
+}

@@ -1,0 +1,130 @@
+.topmenu {
+	border-top: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	&__list {
+		display: table;
+		padding: @sp @sp*2;
+		width: 100%;
+		box-sizing: border-box;
+		.clearfix;
+	}
+	&__item {
+		display: table-cell;
+		width: calc(~"100% / 6");
+		border-right: 1px solid #babbbb;
+		text-align: center;
+		outline: none;
+		text-decoration: none;
+		font-size: 14px;
+		font-weight: 600;
+		&:last-child {
+			border: none;
+		}
+		&:hover, &.active {
+			.topmenu__item-wrap {
+				span {
+					color: @blue;
+				}
+			}
+			.topmenu__item-ico_pen {
+				background: url(../img/icon-menu/icon_izmenit_dannie_active.png) no-repeat;
+
+			}
+			.topmenu__item-ico_del {
+				background: url(../img/icon-menu/icon_udalit_dannie_active.png) no-repeat;
+
+			}
+			.topmenu__item-ico_done {
+				background: url(../img/icon-menu/icon_vizgruzit_na_vneshnii_site_active.png) no-repeat;
+
+			}
+			.topmenu__item-ico_add {
+				background: url(../img/icon-menu/icon_dobavit_issledovania_active.png) no-repeat;
+
+			}
+			.topmenu__item-ico_word {
+				background: url(../img/icon-menu/icon_otkrit_v_word_active.png) no-repeat;
+
+			}
+			.topmenu__item-ico_arh {
+				background: url(../img/icon-menu/icon_perenesti_v_archiv_active.png) no-repeat;
+
+			}
+		}
+		&.disabled {
+			cursor: default;
+			.topmenu__item-wrap {
+				span {
+					color: #999999;
+				}
+			}
+			.topmenu__item-ico_pen {
+				background: url(../img/icon-menu/icon_izmenit_dannie_anactive.png) no-repeat;
+
+			}
+			.topmenu__item-ico_del {
+				background: url(../img/icon-menu/icon_udalit_dannie_anactive.png) no-repeat;
+
+			}
+			.topmenu__item-ico_done {
+				background: url(../img/icon-menu/icon_vizgruzit_na_vneshnii_site_anactive.png) no-repeat;
+
+			}
+			.topmenu__item-ico_add {
+				background: url(../img/icon-menu/icon_dobavit_issledovania_anactive.png) no-repeat;
+
+			}
+			.topmenu__item-ico_word {
+				background: url(../img/icon-menu/icon_otkrit_v_word_anactive.png) no-repeat;
+
+			}
+			.topmenu__item-ico_arh {
+				background: url(../img/icon-menu/icon_perenesti_v_archiv_anactive.png) no-repeat;
+
+			}
+		}
+		
+
+		&-wrap {
+			display: inline-block;
+			span {
+				color: black;
+				text-align: left;
+				line-height: 1;
+				float: left;       
+            }
+		}
+		&-ico {
+			float: left;
+			width: 24px;
+			height: 24px;
+			margin-right: 10px;
+			margin-top: 2px;
+			&_pen {
+				background: url(../img/icon-menu/icon_izmenit_dannie.png) no-repeat;
+				background-size: 24px 24px;
+			}
+			&_del {
+				background: url(../img/icon-menu/icon_udalit_dannie.png) no-repeat;
+				background-size: 24px 24px;
+			}
+			&_done {
+				background: url(../img/icon-menu/icon_vizgruzit_na_vneshnii_site.png) no-repeat;
+				background-size: 24px 24px;
+			}
+			&_add {
+				background: url(../img/icon-menu/icon_dobavit_issledovania.png) no-repeat;
+				background-size: 24px 24px;
+			}
+			&_word {
+				background: url(../img/icon-menu/icon_otkrit_v_word.png) no-repeat;
+				background-size: 24px 24px;
+			}
+			&_arh {
+				background: url(../img/icon-menu/icon_perenesti_v_archiv.png) no-repeat;
+				background-size: 24px 24px;
+			}
+		}
+	}
+
+}

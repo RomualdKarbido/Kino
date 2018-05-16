@@ -1,0 +1,104 @@
+.sandwich {
+	.clearfix;
+	&__item {
+		position: relative;
+		margin-bottom: 10px;
+		.clearfix;
+
+		&:before {
+			content: "\F140";
+			font-family: "Material Design Icons";
+			position: absolute;
+			right: 10px;
+			top: 0px;
+			width: 28px;
+			
+			color: @red;
+			font-size: 28px;
+			font-weight: normal;
+			line-height: 35px;
+			text-align: center;
+			cursor: pointer;
+			transition: 0.2s all;
+			height: 35px;
+		}
+		&.active {
+			.sandwich__table {
+				thead {
+					border: 1px solid #f2f2f2;
+
+					tr {
+						th {
+							color: @red;
+							&:last-child {
+								border-left: 1px solid white;
+							}
+							&:last-child {
+								display: table-cell;
+							}
+						}
+					}
+				}
+				tbody {
+					display: table-row-group;
+				}
+			}
+			&:before {
+				height: 45px;
+				line-height: 45px;
+				transform: rotate(180deg);
+			}
+		}
+	}
+	&__table {
+		width: 100%;
+		&-scroll {
+			
+			overflow: auto;
+			max-height: 234px;
+		}
+		thead {
+			background: #f2f2f2;
+			border: 1px solid #cccccc;
+			tr {
+				th {
+					font-size: 14px;
+					color: black;
+					text-align: left;
+					font-weight: 600;
+					padding: 10px 15px;
+					line-height: 1;
+					vertical-align: middle;
+					box-sizing: border-box;
+					&:last-child {
+						font-size: 12px;
+						width: 150px;
+						display: none;
+					}
+				}
+			}
+		}
+		tbody {
+			display: none;
+			tr {
+				td {
+					border: 1px solid #cccccc;
+					padding: 10px 15px;
+					box-sizing: border-box;
+					&:last-child {
+						width: 150px;
+							
+					}
+				}
+				&:nth-child(1) {
+					td {
+						border-top: #e4e4e4;
+					}					
+				}
+				&:nth-child(2n+2) {
+					background: #fcfcfc;
+				}
+			}
+		}
+	}
+}

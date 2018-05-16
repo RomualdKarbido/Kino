@@ -1,0 +1,151 @@
+@@include('./file-include/head.html')
+<!-- @@include('./file-include/header.html') -->
+
+
+
+
+<div style="width: 1200px; margin: 200px auto;">
+
+    <div style="width: 300px; float: left; margin-right: 30px;">
+        
+        @@include('./file-include/select.html')
+    </div>
+
+    <div style="width: 300px; float: left; margin-right: 30px;">
+       
+        @@include('./file-include/select.html')
+    </div>
+    <div style="width: 300px; float: left;">
+       
+        @@include('./file-include/select.html')
+    </div>
+    
+</div>
+<div style="clear: both;"></div>
+
+<div style="width: 1200px; margin: 20px auto;">
+
+	<div style="width: 300px; float: left; margin-right: 30px;">
+		
+		@@include('./file-include/m-select.html')
+	</div>
+
+	<div style="width: 300px; float: left; margin-right: 30px;">
+      
+        @@include('./file-include/m-select.html')
+    </div>
+    <div style="width: 300px; float: left;">
+		
+		@@include('./file-include/m-select.html')
+	</div>
+	
+</div>
+
+<div style="clear: both;"></div>
+<div style="width: 1200px; margin: 20px auto;">
+    <div class="preloader__on">прелоадер</div>
+    @@include('./file-include/preloader.html')    
+</div>
+
+<div style="clear: both;"></div>
+
+<div style="width: 1200px; margin: 20px auto;">
+   
+    <div style="float: left; width: 150px;">
+        <a href="#" class=" btn_white">
+            <span>Добавить</span> 
+            <i class="mdi mdi-plus-circle-outline"></i>
+        </a>
+    </div>
+    <div style="float: left; width: 150px;">
+        <a href="#" class=" btn_white">
+           <span>Применить</span> 
+           <i class="mdi mdi-check-circle-outline"></i>
+       </a>
+    </div>
+</div>
+
+
+<div style="clear: both;"></div>
+<div style="width: 700px; margin: 20px auto;">
+    <textarea class="textarea" name="" id="" cols="30" rows="6" placeholder="Введите текст"></textarea>
+</div>
+
+<div style="width: 700px; margin: 20px auto;">
+    <input type="text" class="input">
+</div>
+
+
+
+    <div style="width: 700px; margin: 20px auto;">
+        <div style="float: left;">
+        
+            <div class="radio__item">
+                <input type="radio" class="radio" name="radio" id="r1" />
+                <label for="r1" class="radio_label">Лукоил западная сайберия</label>
+            </div>
+            <div class="radio__item">
+                <input type="radio" class="radio" name="radio" id="r2" />
+                <label for="r2" class="radio_label">Лукоил западная сайберия</label>
+            </div>
+            <div class="radio__item">
+                <input type="radio" class="radio" name="radio" id="r3"  disabled="" />
+                <label for="r3" class="radio_label">Лукоил западная сайберия</label>
+            </div>
+            <div class="radio__item">
+                <input type="radio" class="radio" name="radio" id="r4" />
+                <label for="r4" class="radio_label">Лукоил западная сайберия</label>
+            </div>
+            
+        </div>
+
+        <div style="float: right;">
+        
+            <div class="cbox__item">
+                <input type="checkbox" class="cbox" name="cbox" id="r11" />
+                <label for="r11" class="cbox_label">Лукоил западная сайберия</label>
+            </div>
+            <div class="cbox__item">
+                <input type="checkbox" class="cbox" name="cbox" id="r22" />
+                <label for="r22" class="cbox_label">Лукоил западная сайберия</label>
+            </div>
+            <div class="cbox__item">
+                <input type="checkbox" class="cbox" name="cbox" id="r33"  disabled="" />
+                <label for="r33" class="cbox_label">Лукоил западная сайберия</label>
+            </div>
+            <div class="cbox__item">
+                <input type="checkbox" class="cbox" name="cbox" id="r44" />
+                <label for="r44" class="radio_label">Лукоил западная сайберия</label>
+            </div>
+
+        </div>    
+    </div>
+    <div style="margin: 20px auto; width: 200px;">
+        <div class="title"> Datepeaker</div>
+            <div class="ml-datepeaker">
+                
+                <input type="text" id="datepicker">
+            </div>
+    </div>
+</div>
+
+
+
+<!-- @@include('./file-include/footer.html') -->
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".left-sidebar__box-name").click(function () {
+            $(this).parent('.left-sidebar__box').toggleClass("active");
+        });
+        $(".left-sidebar__item").click(function () {
+            $('.left-sidebar__item').removeClass('active');
+            $(this).addClass("active");
+        });
+        $(".right-sidebar__box-item-title").click(function () {
+            $(this).parent('.right-sidebar__box-item').toggleClass("active");
+        });
+    })
+</script>
+
+
