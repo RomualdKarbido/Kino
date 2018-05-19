@@ -1,0 +1,65 @@
+.nesw-blok {
+	background: @gray;
+	font-family: azbuka;
+	&__top {
+		display: flex;
+		padding: 50px 0 45px;
+		.clearfix;
+		&-info {
+			flex: 0 0 34%;
+
+
+			
+			&-wrap {
+				padding: 0 60px 0 140px;
+			}
+		}
+		&-img {
+			flex: 1;
+			background: red;
+			height: 720px;
+
+			background-position: center;
+			background-size: cover !important;
+		}
+		&-title {
+			font-size: 65px;
+			line-height: 1.1;
+			margin-bottom: 40px;
+		}
+		&-description {
+			font-size: 36px;
+			line-height: 1.2;
+			color: #6b6b6b;
+			font-style: italic;
+			margin-bottom: 215px;
+		}
+	}
+	&__tiles {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 40px;
+	}
+	&__tile {
+		width: calc(~'(100% - 75px) / 4');
+		min-width: calc(~'(100% - 75px) / 4');
+		padding-top: calc(~'(100% - 75px) / 4');
+		
+		color: white;
+		font-size: 24px;
+		font-style: italic;
+		background-size: cover !important;
+		background-position: center center !important;
+		position: relative;
+		box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.33);
+
+		&-name {
+			position: absolute;
+			bottom: 30px;
+			font-size: 24px;
+			text-align: center;
+			width: 100%;
+			line-height: 1.1;
+		}
+	}
+}

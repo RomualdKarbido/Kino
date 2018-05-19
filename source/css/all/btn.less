@@ -1,0 +1,37 @@
+.btn {
+	display: block;
+	&__big {
+		border: 2px solid white;
+		font-size: 43px;
+		padding: 10px 110px;
+		display: inline-block;
+		text-transform: uppercase;
+		line-height: 1;
+		text-decoration: none;
+		transition: 0.2s all;
+		cursor: pointer;
+		&:hover {
+			color: @link-blue;
+			border: 2px solid @link-blue;
+		}
+	}
+	&__search {
+		font-size: 33px;
+		border-top: none;
+		margin-left: 115px; 
+		transition: 0.2s all;
+		cursor: pointer;
+		&:hover {
+			color: @link-blue;
+		}
+
+	}
+	&__news {
+		text-decoration: none;
+		display: inline-block;
+		border: 2px solid @blue;
+		text-transform: uppercase;
+		padding: 15px 65px;
+		color: @blue;
+	}
+}
