@@ -1,7 +1,46 @@
 .footer {
-	width: 100%;
+	
 	margin: -@footer auto 0;
 	height: @footer;
-	background: #BFF08E;
+	background: @blue;
+	color: white;
 	position: relative;
+	font-family: azbuka;
+	padding: 0 120px;
+	&__content {
+		display: flex;
+		align-items: center;
+		height:  @footer;
+	}
+	&__textblock {
+		width: 60%;
+	}
+	&__title {
+		font-size: 30px;
+		line-height: 1.1;
+		margin-bottom: 10px;
+	}
+	&__contact {
+		&-item {
+			font-size: 22px;
+			line-height: 1.6;
+		}
+	}
+	&__soc {
+		flex: 1;
+		
+		&-item {
+			display: block;
+			color: #818794;
+			float: right;
+			font-size: 40px;
+			text-shadow: 2px 2px 2px #141b2e;
+			margin-left: 40px;
+			transition: color 0.2s;
+			line-height: 1;
+			&:hover {
+				color: white;
+			}
+		}
+	}
 }

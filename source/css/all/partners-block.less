@@ -1,0 +1,55 @@
+.partners-block {
+	width: 100%;
+	text-align: center;
+	min-height: 415px;
+	background: @blue;
+	color: white;
+	position: relative;
+	font-family: azbuka;
+	margin-bottom: 40px;
+	&__info {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: flex;
+		text-align: center;
+     	align-items: center;
+     	
+     	&-wrap {
+			margin: 0 auto;
+			text-align: center;
+			width: 100%;
+
+     	}
+		
+	}
+	&__title {
+		font-size: 60px;
+		line-height: 1;
+		display: block;
+		margin-bottom: 50px;
+		text-transform: uppercase;
+		.clearfix;
+	}
+	&__link {
+		color: white;
+		min-width: 415px;
+		padding: 25px;
+		text-decoration: none;
+		font-size: 26px;
+		display: inline-block;
+		border: 2px solid white;
+		transition: 0.2s all;
+		&:hover {
+			color: @link-blue;
+			border-color: @link-blue;
+		}
+	}
+	&__img {
+		width: 100%;
+		height: auto;
+	}
+
+}
