@@ -1,0 +1,30 @@
+.breadcrumbs {
+	font-family: azbuka;
+	font-size: 22px;
+	padding: 35px 125px 25px;
+	&__list {
+
+	}
+	&__item {
+		color: balck;
+		display: inline-block;
+		line-height: 1;
+		&:after {
+			content: '/';
+			color: #4d4d4d;
+		}
+		&:last-child {
+			&:after {
+				display: none;
+			}
+		}
+		a {
+			color: #4d4d4d;
+			transition: color 0.2s;
+			&:hover {
+				color: @link-blue;
+			}
+
+		}
+	}
+}

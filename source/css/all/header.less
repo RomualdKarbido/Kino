@@ -2,6 +2,11 @@
 	height: @header;	
 	font-family: azbuka;
 	overflow: hidden;
+	
+	&_img {
+		background: url(../img/header-small.jpg) no-repeat;
+		background-size: cover !important;
+	}
 	&__bg {
 	background: rgba(0, 0, 0 , 0.5);	
 	height: 215px;
@@ -33,7 +38,8 @@
 		line-height: 1.2;
 		position: relative;
 		z-index: 10;
-		float: left;
+		
+		flex: 1;
 	}
 	&__film {
 		width: 388px;
@@ -56,27 +62,7 @@
 		 	top: 0;
 		 	left: 0;
 		 	right: 0;
-		 }
-		 .slick-dots {
-		 	position: relative;
-		 	margin-top: 0;
-		 	top: -75px;
-		 	li {
-		 		cursor: pointer;
-		 		margin: 0 32px;
-		 		&:before {
-		 			background: white;
-		 			border: 1px solid #b2c0cb;
-		 		}
-		 		&.slick-active {
-		 			&:before {
-		 				background: #264157;
-		 				
-		 			}
-		 		}
-		 	}
-		 }
-		 
+		 }		 
 	}
 	&__slider {
 		 height: 100vh;
