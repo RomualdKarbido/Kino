@@ -1,6 +1,4 @@
 .header {
-	// background: rgba(0, 0, 0 , 0.5);
-	
 	height: @header;	
 	font-family: azbuka;
 	overflow: hidden;
@@ -48,11 +46,49 @@
 		z-index: 1;
 
 	}
+	//слайдер 
 	&_slider {
 		 height: 100vh;
-		 background: url(../img/header-img.jpg) no-repeat;
-		 background-size: cover;  
+		 // position: relative;
+		 // z-index: 1;
+		 .header__bg {
+		 	position: absolute;
+		 	top: 0;
+		 	left: 0;
+		 	right: 0;
+		 }
+		 .slick-dots {
+		 	position: relative;
+		 	margin-top: 0;
+		 	top: -75px;
+		 	li {
+		 		cursor: pointer;
+		 		margin: 0 32px;
+		 		&:before {
+		 			background: white;
+		 			border: 1px solid #b2c0cb;
+		 		}
+		 		&.slick-active {
+		 			&:before {
+		 				background: #264157;
+		 				
+		 			}
+		 		}
+		 	}
+		 }
+		 
 	}
+	&__slider {
+		 height: 100vh;
+		  
+	}
+	&__slide {
+		 height: 100vh;
+		 width: 100vw;
+		 background-size: cover !important; 
+		 background-repeat: no-repeat;
+	}
+	//социальные кнопки
 	&__soc {
 		position: relative;
 		z-index: 2;
