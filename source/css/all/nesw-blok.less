@@ -41,7 +41,6 @@
 		width: calc(~'(100% - 75px) / 4');
 		min-width: calc(~'(100% - 75px) / 4');
 		padding-top: calc(~'(100% - 75px) / 4');
-		
 		color: white;
 		font-size: 24px;
 		font-style: italic;
@@ -49,6 +48,7 @@
 		background-position: center center !important;
 		position: relative;
 		box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.33);
+		border-radius: 2px;
 
 		&-name {
 			position: absolute;
@@ -63,7 +63,11 @@
 		.nesw-block {
 			&__top {
 				padding-top: 0;
+				padding-bottom: 0;
+				margin-bottom: 45px;
 				max-height: 600px;
+				box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05);
+
 				&-img {
 					height: 600px;
 				}

@@ -630,8 +630,8 @@ sup {
 }
 .btn__big {
   border: 2px solid white;
-  font-size: 43px;
-  padding: 10px 110px;
+  font-size: 38px;
+  padding: 20px 50px;
   display: inline-block;
   text-transform: uppercase;
   line-height: 1;
@@ -777,6 +777,7 @@ sup {
   background-position: center center !important;
   position: relative;
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.33);
+  border-radius: 2px;
 }
 .nesw-block__tile-name {
   position: absolute;
@@ -788,7 +789,10 @@ sup {
 }
 .nesw-block_alt .nesw-block__top {
   padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 45px;
   max-height: 600px;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05);
 }
 .nesw-block_alt .nesw-block__top-img {
   height: 600px;
@@ -816,7 +820,7 @@ sup {
 .partners-block {
   width: 100%;
   text-align: center;
-  min-height: 415px;
+  min-height: 430px;
   background: #1a243c;
   color: white;
   position: relative;
@@ -1247,6 +1251,7 @@ sup {
   background-position: center center !important;
   position: relative;
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.33);
+  border-radius: 2px;
 }
 .news__tile:nth-child(3n) {
   margin-right: 0;
