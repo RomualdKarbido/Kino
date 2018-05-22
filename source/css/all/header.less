@@ -22,14 +22,15 @@
 	}
 	&__logo {
 		height: 215px;
-		width: 145px;
+		width: 160px;
 		display: block;
 		background: url(../img/gerb.png) no-repeat center;
-		background-size: auto 162px;
-		min-width: 145px;
+		// background-size: auto 162px;
+		background-size: 100% auto;
+		// min-width: 145px;
 
-		float: left;
-		margin-right: @sp*2;
+		
+		margin-right: 15px;
 
 	}
 	&__text {
@@ -78,8 +79,9 @@
 	&__soc {
 		position: relative;
 		z-index: 2;
-		width: 330px;
+		// width: 290px;
 		margin-top: 40px;
+		padding-left: 20px;
 		
 
 		&-item {
@@ -108,4 +110,92 @@
 
 		}
 	}
+	@media (max-width: 1620px) {
+		.header {
+			&__content {
+				
+				&-wrap {
+
+				}
+			}
+			&__logo {
+				height: 185px;
+				width: 140px;
+				
+			}
+			&__text {
+				font-size: 24px;
+			}
+		}
+	}
+	@media (max-width: 1465px) {
+		.header {
+			&__content {
+				padding: 0 50px;
+				&-wrap {
+
+				}
+			}
+			&__logo {
+				
+				
+			}
+			&__text {
+				font-size: 20px;
+			}
+			&__soc {
+				&-item {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+	@media (max-width: 1120px) {
+		.header {
+			&__content {
+				position: relative;
+				&-wrap {
+
+				}
+			}
+			&__logo {
+				
+				
+			}
+			&__text {
+				padding-top: 95px;
+			}
+			&__soc {
+				position: absolute;
+				top: 40px;
+				left: 170px;
+				margin-top: 0;
+				z-index: 20;
+				&-item {
+					
+				}
+			}
+		}
+	}
+	@media (max-width: 1025px) {
+		.header {
+			&__soc {
+				
+				
+				&-item {
+					
+				}
+			}
+			&__logo {
+				height: 214px;
+				
+			}
+		}
+	}
 }
+
+
+
+
+
+
