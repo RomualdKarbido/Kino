@@ -1,22 +1,18 @@
 .top-menu {
-	height: 30px;
+	height: 60px;
 	position: absolute;
 	z-index: 100;
-	padding-left: 275px;
+	padding-left: 295px;
 	color: white;
 	font-size: 20px;
-	min-height: 40px;
-
-	top: 175px;
-
+	min-height: 60px;
+	top: 155px;
 	&__list {
 		display: flex;
-
 	}
 	&__item {
 		position: relative;
 		display: block;
-		// margin-right: @sp*2;
 		transition: 0.2s all;
 		a {
 			color: white;
@@ -26,8 +22,8 @@
 			cursor: pointer;
 			text-transform: uppercase;
 			white-space: nowrap;
-			height: 40px;
-			line-height: 40px;
+			height: 60px;
+			line-height: 60px;
 			
 			&:after {
 				content: "\F140";
@@ -55,6 +51,12 @@
 					transform: rotate(180deg);
 					
 				}
+			}
+		}
+		&:last-child {
+			.top-menu__sublist {
+				left: auto;
+				right: 0;
 			}
 		}
 	}
@@ -94,6 +96,15 @@
 		&__item {
 			& > a {
 				padding: 0 20px 0 20px;
+				
+			}
+		}
+	}
+}
+@media (max-width: 1200px) {
+	.top-menu {
+		&__item {
+			& > a {
 				font-size: 16px;
 			}
 			a {
