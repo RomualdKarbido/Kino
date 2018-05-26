@@ -110,86 +110,157 @@
 
 		}
 	}
-	@media (max-width: 1655px) {
-		.header {
-			&__content {
-				
-				&-wrap {
+}
+@media (max-width: 1655px) {
+	.header {
+		&__content {
+			
+			&-wrap {
 
-				}
 			}
-			&__logo {
-				height: 185px;
-				width: 140px;
-				
+		}
+		&__logo {
+			height: 185px;
+			width: 140px;
+			
+		}
+		&__text {
+			font-size: 24px;
+		}
+	}
+}
+@media (max-width: 1465px) {
+	.header {
+		&__content {
+			padding: 0 50px;
+			&-wrap {
+
 			}
-			&__text {
-				font-size: 24px;
+		}
+		&__logo {
+			
+			
+		}
+		&__text {
+			font-size: 20px;
+		}
+		&__soc {
+			&-item {
+				margin-left: 0;
 			}
 		}
 	}
-	@media (max-width: 1465px) {
-		.header {
-			&__content {
-				padding: 0 50px;
-				&-wrap {
+}
+@media (max-width: 1120px) {
+	.header {
+		&__content {
+			position: relative;
+			&-wrap {
 
-				}
 			}
-			&__logo {
+		}
+		&__logo {
+			
+			
+		}
+		&__text {
+			padding-top: 95px;
+		}
+		&__soc {
+			position: absolute;
+			top: 40px;
+			left: 170px;
+			margin-top: 0;
+			z-index: 20;
+			&-item {
 				
-				
-			}
-			&__text {
-				font-size: 20px;
-			}
-			&__soc {
-				&-item {
-					margin-left: 0;
-				}
 			}
 		}
 	}
-	@media (max-width: 1120px) {
-		.header {
-			&__content {
+}
+@media (max-width: 1025px) {
+	.header {
+		&__soc {
+			
+			
+			&-item {
+				
+			}
+		}
+		&__logo {
+			height: 214px;
+			
+		}
+	}
+}
+@media (max-width: 840px) {
+	.header {
+		&__text {
+			font-size: 17px;
+		}
+	}
+}
+@media (max-width: 767px) {
+	.header {
+		overflow: hidden;
+		
+		&_slider {
+			height: auto; 
+			background: url(../img/header-img-mb.jpg);
+			background-size: cover !important;
+			.header__slider {
+				display: none;
+				height: auto; 
+			}
+			.header__bg {
 				position: relative;
-				&-wrap {
-
-				}
-			}
-			&__logo {
-				
-				
-			}
-			&__text {
-				padding-top: 95px;
-			}
-			&__soc {
-				position: absolute;
-				top: 40px;
-				left: 170px;
-				margin-top: 0;
-				z-index: 20;
-				&-item {
-					
-				}
 			}
 		}
-	}
-	@media (max-width: 1025px) {
-		.header {
-			&__soc {
-				
-				
-				&-item {
-					
-				}
+		&__content {
+			padding-right: 15px;
+			padding-left: 15px;
+
+			&-wrap {
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				text-align: center;
+				align-items: center;
+				border-bottom: 40px;
 			}
-			&__logo {
-				height: 214px;
-				
-			}
+		}
+		&__logo {
+			margin: 0;
+			margin-top: 40px;
+			padding: 0;
+			height: 250px;
+			width: 200px;
+			position: relative;
+			z-index: 5;
+
+		}
+		&__bg {
+			height: auto;
+			
+			
+		}
+		&__soc {
+			position: relative;
+			top: 0;
+			left: 0;
+			margin-bottom: 50px;
+			margin-top: 20px;
+		}
+		&__text {
+			font-size: 24px;
+			padding: 0;
+			margin: 0;
+		}
+		&__film {
+
+			display: none;
+			height: 500px;
+			background-size: contain;
 		}
 	}
 }

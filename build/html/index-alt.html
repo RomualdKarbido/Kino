@@ -4,7 +4,7 @@
 	<title></title>
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
-    <meta content="content= width=device-width" name="viewport">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
     <meta content="ie=edge" http-equiv="x-ua-compatible">
 	<link href="../css/style.css" rel="stylesheet">
 	<?xml-stylesheet type="text/css" href="./css/style.css"?>
@@ -17,11 +17,12 @@
 	<!-- <script src="../scripts/jquery-ui.js"></script>
 	<script src="../scripts/jquery.datepicker.extension.range.min.js"></script> -->
 
+	
 	<script src="../scripts/scripts.js"></script>  
 
 </head>
 
-	<body>
+	<body class="body">
 		<div class="wrapper">
 <header class="header header_slider">
 	
@@ -55,8 +56,12 @@
 		</div>
 	</div>
 	<div class="top-menu">
+
+	<div class="top-menu__menu-btn">
+		<i class="mdi mdi-menu"></i> 
+	</div>
 	<ul class="top-menu__list">
-		<li class="top-menu__item ">
+		<li class="top-menu__item">
 			<a href="/">О фонде</a>
 			<ul class="top-menu__sublist">
 				<li class="top-menu__subitem"><a href="history.html">История</a></li>
@@ -127,75 +132,87 @@
 
 
 
-    <div class="middle">
-        <div class="blue-block">
-            <div class="blue-block__wrap">
-                <a href="/" class="btn btn__big">Коллекция Госфильмофонда России</a>
-                <a href="/" class="mdi mdi-magnify btn__search"></a>
+<div class="middle">
+    <div class="blue-block">
+        <div class="blue-block__wrap">
+            <a href="/" class="btn btn__big">Коллекция Госфильмофонда России</a>
+            <a href="/" class="mdi mdi-magnify btn__search"></a>
+        </div>
+    </div>
+
+    <div class="nesw-block nesw-block_alt">
+
+
+        <div class="nesw-block__top">
+
+            <div class="nesw-block__top-info">
+                <div class="nesw-block__top-info-wrap">
+                    <h3 class="nesw-block__top-title">Фестиваль в Мытищах</h3>
+                    <div class="nesw-block__top-description">В городе Мытищи прошел великоллепный фестиваль о творчестве режисера фильмов которого нельзя называть.</div>
+                    <a href="/" class="btn btn__news">Подробнее</a>
+                </div>
             </div>
+            <div class="nesw-block__top-img" style="background: url(../img/boy.jpg);"></div>
         </div>
 
-        <div class="nesw-block nesw-block_alt">
-
-
-            <div class="nesw-block__top">
-                    
-                <div class="nesw-block__top-info">
-                    <div class="nesw-block__top-info-wrap">
-                        <h3 class="nesw-block__top-title">Фестиваль в Мытищах</h3>
-                        <div class="nesw-block__top-description">В городе Мытищи прошел великоллепный фестиваль о творчестве режисера фильмов которого нельзя называть.</div>
-                        <a href="/" class="btn btn__news">Подробнее</a>
-                    </div>
-                </div>
-                <div class="nesw-block__top-img" style="background: url(../img/boy.jpg);"></div>
-            </div>
-
-            <div class="nesw-block__tiles">
-
-                <div class="nesw-block__tile" style="background: url(../img/king0.jpg);">
-                    <div class="nesw-block__tile-name">Заголовок новости</div>
-                </div>
-                <div class="nesw-block__tile" style="background: url(../img/king.jpg);">
-                    <div class="nesw-block__tile-name">Супер крутой фильм о людях</div>
-                </div>
-                <div class="nesw-block__tile" style="background: url(../img/king3.jpg);">
-                    <div class="nesw-block__tile-name">Георгий глобус пропил</div>
-                </div>
-                <div class="nesw-block__tile" style="background: url(../img/king2.jpg);">
-                    <div class="nesw-block__tile-name">Хроники капитана Гатераса</div>
-                </div>
-                
-                
-            </div>
-        </div>
-        <div class="partners-block">
-            <img src="../img/ktr.jpg" alt="" class="partners-block__img">
-            <div class="partners-block__info">
-                <div class="partners-block__info-wrap">
-                    <div class="partners-block__title">КИНОТЕАТР «ИЛЛЮЗИОН»</div>
-                    <a href="/" class="partners-block__link">www.lluzion-cinema.ru</a>
-                </div>
-            </div>
-        </div> 
-
-        <div class="partners-block">
-            <img src="" alt="" class="partners-block_img">
-            <div class="partners-block__info">
-                <div class="partners-block__info-wrap">
-                    <div class="partners-block__title">ЖУРНАЛ «ЛАВРЫ КИНО»</div>
-                    <a href="/" class="partners-block__link">www.lluzion-cinema.ru</a>
-                </div>
-            </div>
-        </div>
         
-            
-        <div class="map-block">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d119038.58490123854!2d37.751769884565405!3d55.70579723799744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1526743000293" width="100%" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+        <div class="nesw-block__tiles">
+           
+            <div class="nesw-block__tile" style="background: url(../img/king0.jpg);">
+                <div class="nesw-block__tile-name">Заголовок новости</div>
+            </div>
+
+          
+            <div class="nesw-block__tile" style="background: url(../img/king.jpg);">
+                <div class="nesw-block__tile-name">Супер крутой фильм о людях</div>
+            </div>
+
+            <div class="nesw-block__tile" style="background: url(../img/king3.jpg);">
+                <div class="nesw-block__tile-name">Георгий глобус пропил</div>
+            </div>
+
+          
+            <div class="nesw-block__tile" style="background: url(../img/king2.jpg);">
+                <div class="nesw-block__tile-name">Хроники капитана Гатераса</div>
+            </div>
+
+
         </div>
+    </div>
 
-      
 
-    </div><!-- .middle-->
+
+
+    <div class="partners-block">
+        <img src="../img/ktr.jpg" alt="" class="partners-block__img">
+        <div class="partners-block__info">
+            <div class="partners-block__info-wrap">
+                <div class="partners-block__title">КИНОТЕАТР «ИЛЛЮЗИОН»</div>
+                <a href="/" class="partners-block__link">www.lluzion-cinema.ru</a>
+            </div>
+        </div>
+    </div> 
+
+    <div class="partners-block">
+        <img src="" alt="" class="partners-block_img">
+        <div class="partners-block__info">
+            <div class="partners-block__info-wrap">
+                <div class="partners-block__title">ЖУРНАЛ «ЛАВРЫ КИНО»</div>
+                <a href="/" class="partners-block__link">www.lluzion-cinema.ru</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="map-block">
+        <div id="map"></div>  
+        <script src="../scripts/map.js"></script> 
+    </div>
+
+
+
+</div><!-- .middle-->
 
 </div><!-- .wrapper -->
 
@@ -224,7 +241,7 @@
 		   		</div>
 		   	</div>
 		</div>
-
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAt0dAMGtlEB-48KGNLMBxabXm7Jf1stsU&callback=initMap" async defer></script>
 	</body>
 </html>
 

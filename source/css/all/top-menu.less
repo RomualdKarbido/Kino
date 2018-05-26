@@ -7,6 +7,9 @@
 	font-size: 20px;
 	min-height: 60px;
 	top: 155px;
+	&__menu-btn {
+		display: none;
+	}
 	&__list {
 		display: flex;
 	}
@@ -37,14 +40,7 @@
 		&:hover {
 			background: rgba(26, 36, 60, 0.9);
 			.top-menu__sublist {
-				min-width: 285px;
 				display: block;
-				padding-top: 10px;
-				position: absolute;
-				top: 100%;
-				left: 0;
-				background: rgba(26, 36, 60, 0.9);
-				animation: vizible  .3s;
 			}
 			& > a {
 				&:after {
@@ -62,6 +58,14 @@
 	}
 	&__sublist {
 		display: none;
+		min-width: 285px;
+		padding-top: 10px;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background: rgba(26, 36, 60, 0.9);
+		animation: vizible  .3s;
+		
 	}
 	&__subitem {
 		a {
@@ -115,6 +119,90 @@
 }
 @media (max-width: 1025px) {
 	.top-menu {
-		display: none;
+		
+		&__menu-btn {
+			display: block;
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			font-size: 30px;
+			cursor: pointer;
+			transform: all 0.2s;
+			z-index: 10;
+			i {
+				color: white;
+				transform: all 0.2s;
+				&:hover {
+					color: @link-blue;
+				}
+			}
+		}
+		&__list {
+			display: none;
+			padding-bottom: 20px;
+			.top-menu__item {
+				& > a {
+					padding: 5px 20px 5px 30px;
+					border-bottom: 1px solid #424b5f;
+					border-top: 1px solid #424b5f;
+					line-height: 40px;
+					height: 40px;
+					&:after {
+						display: none;
+					}
+				}
+			}
+			&.active {
+				min-width: 360px;
+				max-height: 100vh;
+				overflow: auto;
+				display: block;
+				position: fixed;
+				top:0;
+				right: 0;
+				background: rgba(26, 36, 60, 0.9);
+				padding-top: 50px;
+				z-index: 5;
+				animation: vizible  .3s;
+				
+				.top-menu__item {
+					&:hover {
+						display: block;
+						background: none;
+						animation: none;
+						.top-menu__sublist {
+
+						}
+					}
+				}
+				.top-menu__sublist {
+					display: block;
+					position: relative;
+					background: none;
+					
+					padding-bottom: 20px;
+					.top-menu__subitem {
+						a {
+							padding-left: 50px;	
+							font-size: 14px;
+							padding-top: 11px;
+							padding-bottom: 11px;
+						}
+						
+					}
+
+				}
+			}
+		}
+	}
+
+}
+@media (max-width: 460px) {
+	.top-menu {
+		&__list {
+			&.active {
+				min-width: 100%;
+			}
+		}
 	}
 }

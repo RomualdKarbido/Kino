@@ -6,6 +6,8 @@
 	color: white;
 	position: relative;
 	font-family: azbuka;
+	overflow: hidden;
+	
 	
 	&__info {
 		position: absolute;
@@ -31,6 +33,7 @@
 		display: block;
 		margin-bottom: 50px;
 		text-transform: uppercase;
+		padding: 0 40px;
 		.clearfix;
 	}
 	&__link {
@@ -50,6 +53,34 @@
 	&__img {
 		width: 100%;
 		height: auto;
+		&.active {
+			height: 430px;
+			width: auto;
+			position: relative;
+
+		}
 	}
 
+}
+
+@media (max-width: 767px) {
+	.partners-block {
+		&__title {
+			font-size: 50px;
+			
+		}
+
+	}
+}
+@media (max-width: 500px) {
+	.partners-block {
+		&__link {
+			min-width: auto;
+			font-size: 20px;
+		}
+		&__title {
+			font-size: 35px;
+		}
+
+	}
 }
