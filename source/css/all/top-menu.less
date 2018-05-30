@@ -13,7 +13,7 @@
 	&__list {
 		display: flex;
 	}
-	&__item {
+	&__item, .menu-item {
 		position: relative;
 		display: block;
 		transition: 0.2s all;
@@ -39,7 +39,7 @@
 		}
 		&:hover {
 			background: rgba(26, 36, 60, 0.9);
-			.top-menu__sublist {
+			.top-menu__sublist, .sub-menu {
 				display: block;
 			}
 			& > a {
@@ -50,16 +50,17 @@
 			}
 		}
 		&:last-child {
-			.top-menu__sublist {
+			.top-menu__sublist, .sub-menu {
 				left: auto;
 				right: 0;
 			}
 		}
 	}
-	&__sublist {
+	&__sublist, .sub-menu {
 		display: none;
 		min-width: 285px;
 		padding-top: 10px;
+		padding-bottom: 15px;
 		position: absolute;
 		top: 100%;
 		left: 0;
@@ -67,7 +68,10 @@
 		animation: vizible  .3s;
 		
 	}
-	&__subitem {
+	&__subitem, .sub-menu > .menu-item {
+		&:hover {
+			background: none;
+		}
 		a {
 			color: white;
 			text-decoration: none;
@@ -83,11 +87,15 @@
 			}
 			&:hover {
 				color: @link-blue;
+				background: none !important;
 			}
 
 		}
 	}
 }
+
+
+
 @media (max-width: 1620px) {
 	.top-menu {
 		padding-left: 120px
@@ -97,7 +105,7 @@
 @media (max-width: 1465px) {
 	.top-menu {
 		    padding-left: 50px;
-		&__item {
+		&__item, .menu-item {
 			& > a {
 				padding: 0 20px 0 20px;
 				
@@ -107,7 +115,7 @@
 }
 @media (max-width: 1200px) {
 	.top-menu {
-		&__item {
+		&__item, .menu-item  {
 			& > a {
 				font-size: 16px;
 			}
@@ -123,8 +131,8 @@
 		&__menu-btn {
 			display: block;
 			position: fixed;
-			top: 20px;
-			right: 20px;
+			top: 15px;
+			right: 15px;
 			font-size: 30px;
 			cursor: pointer;
 			transform: all 0.2s;
@@ -140,7 +148,7 @@
 		&__list {
 			display: none;
 			padding-bottom: 20px;
-			.top-menu__item {
+			.top-menu__item, .menu-item  {
 				& > a {
 					padding: 5px 20px 5px 30px;
 					border-bottom: 1px solid #424b5f;
@@ -161,32 +169,29 @@
 				top:0;
 				right: 0;
 				background: rgba(26, 36, 60, 0.9);
-				padding-top: 50px;
+//				padding-top: 50px;
 				z-index: 5;
 				animation: vizible  .3s;
 				
-				.top-menu__item {
+				.top-menu__item, .menu-item  {
 					&:hover {
 						display: block;
 						background: none;
 						animation: none;
-						.top-menu__sublist {
-
-						}
 					}
 				}
-				.top-menu__sublist {
+				.top-menu__sublist, .sub-menu {
 					display: block;
 					position: relative;
 					background: none;
-					
-					padding-bottom: 20px;
-					.top-menu__subitem {
+					padding-bottom: 10px;
+					.top-menu__subitem,  .menu-item {
 						a {
 							padding-left: 50px;	
 							font-size: 14px;
 							padding-top: 11px;
 							padding-bottom: 11px;
+							border: none;
 						}
 						
 					}

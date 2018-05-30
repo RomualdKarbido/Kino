@@ -1,8 +1,36 @@
 .history-slider {
-	height: 600px;
+	height: 430px;
+	&__item {
+		height: 430px;
+	}
 }
 @media (max-width: 1510px) {
 	.history-slider {
-		height: 500px;
+		height: 380px; 
+		&__item {
+			height: 380px;
+		}
+	}
+}
+@media (max-width: 600px) {
+	.history-slider {
+		height: auto;
+		&__item {
+			height: auto;
+			width: 100vw;
+		}
+		.slick-arrow {
+			display: none !important;
+		}
+		.slick-dots {
+			top: -40px;
+			li {
+				margin: 0 15px;
+				&:before {
+					width: 13px;
+					height: 13px;
+				}
+			}
+		}
 	}
 }

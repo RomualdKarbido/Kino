@@ -66,11 +66,11 @@
 		 }		 
 	}
 	&__slider {
-		 height: 100vh;
+		 height: 100vh !important;
 		  
 	}
 	&__slide {
-		 height: 100vh;
+		 height: 100vh !important;
 		 width: 100vw;
 		 background-size: cover !important; 
 		 background-repeat: no-repeat;
@@ -204,7 +204,7 @@
 	.header {
 		overflow: hidden;
 		
-		&_slider {
+		&_slider, &_img {
 			height: auto; 
 			background: url(../img/header-img-mb.jpg);
 			background-size: cover !important;
@@ -264,7 +264,22 @@
 		}
 	}
 }
-
+@media (max-width: 767px) {
+	.header {
+		&__logo {
+			margin-top: 15px;
+			height: 236px;
+			width: 177px;
+		}
+		&__text {
+			font-size: 18px;
+			
+		}
+		&__soc {
+			margin-bottom: 25px;
+		}
+	}
+}
 
 
 

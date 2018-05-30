@@ -24,18 +24,47 @@ $(document).ready(function() {
 		}	
 	};
 	pb();
-	$(window).resize(function() {
+	$(window).resize(function() { 
 		pb();
-		
 	});
 
 	
 	
-	
+
+	$('.filter-az__item').click(function(){
+		var LetterID = $(this).html();
+		$(".filter-az__list, .filter-az__list-big").empty();
+		$('.filter-az__list-big').html(LetterID);
+		$(function(){
+		    $.getJSON('../scripts/list.json', function(data) {
+		    	for(var i=0; i<data.length; i++){
+		    		var valueField = data[i].name[0];
+		    		if (valueField == LetterID) {
+		    			$('.filter-az__list').append('<li>'  + data[i].name + '</li>');
+		    		}
+		    	}  
+		    });
+		});
+		
+	});
 	
 	
 
-
-
+	$('.filter-az__switch').click(function(){
+		$('.filter-az__switch').removeClass('active');
+		$(this).addClass('active');
+		if ($('#en').hasClass('active')) {
+			$('.filter-az').removeClass('active');
+			$('.filter-az_en').addClass('active');
+		} 
+		if ($('#rus').hasClass('active')) {
+			$('.filter-az').removeClass('active');
+			$('.filter-az_rus').addClass('active');
+		}
+		if ($('#digits').hasClass('active')) {
+			$('.filter-az').removeClass('active');
+			$('.filter-az_digits').addClass('active');
+		}
+	});
 	
 });
