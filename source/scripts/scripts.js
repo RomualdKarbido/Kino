@@ -3,8 +3,14 @@ $(document).ready(function() {
 		$('.top-menu__list').toggleClass('active');
 		$('.body').toggleClass('menu');
 	});
-
 	
+	$( ".menu-item" ).each(function( index ) {
+		if($(this).children('ul').length > 0) {
+			$(this).children('a').addClass('after');
+		}
+	});
+
+
 	//картинка для партнерского блока
 
 	function pb (){
@@ -29,7 +35,7 @@ $(document).ready(function() {
 	});
 
 	
-	
+	//фильтрация букв в коллециях
 
 	$('.filter-az__item').click(function(){
 		var LetterID = $(this).html();
@@ -45,7 +51,8 @@ $(document).ready(function() {
 		    	}  
 		    });
 		});
-		
+		var destination = $('.content_letter').offset().top;
+		$('html, body').animate({ scrollTop: destination }, 1100);
 	});
 	
 	

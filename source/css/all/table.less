@@ -1,0 +1,171 @@
+.table {
+	font-family: 'azbuka';
+	&__name {
+		text-align: center;
+		font-size: 32px;
+		font-weight: 700;
+		line-height: 1.2;
+		margin-bottom: 15px;
+	}
+	&__services {
+		min-width: 668px;
+		thead {
+			tr {
+				th {
+					&:nth-child(1) {
+						width: 90px;
+					}
+					&:nth-child(2) {
+						
+					}
+					&:nth-child(3) {
+						width: 260px;
+					}
+					&:nth-child(4) {
+						width: 200px;
+					}
+				}
+			}
+		}
+	}
+	&__wrap {
+		overflow-x: scroll;
+		margin-bottom: 170px;
+
+
+	}
+}
+table {
+	border: 1px solid #383838;
+	width: 100%;
+	margin-bottom: 30px;
+	
+	thead {
+		font-size: 32px;
+		font-weight: 700;
+
+	}
+	tbody {
+		strong {
+			font-size: 32px;
+		}
+	}
+	tr {
+		border: 1px solid #383838;
+	}
+	td, th {
+		border-left: 1px solid #383838;
+		padding: 15px 35px;
+		vertical-align: middle;
+		&:first-child {
+			border: none;
+			vertical-align: top;
+		}
+	}
+	th {
+		line-height: 1;
+	}
+	td {
+		font-size: 28px;
+		ul {
+			li {
+				// padding-left: 20px;
+				&:before {
+					content: '- ';
+				}
+			}
+		}
+	}
+}
+@media (max-width:1300px) {
+	table {
+		thead {
+			font-size: 26px;
+		}
+		tbody {
+			strong {
+				font-size: 26px;
+			}
+		}
+		td {
+			font-size: 22px;
+		}
+	}
+	.table {
+		&__services {
+			thead {
+				tr {
+					th {
+						&:nth-child(1) {
+							width: 70px;
+						}
+						&:nth-child(2) {
+							
+						}
+						&:nth-child(3) {
+							width: 200px;
+						}
+						&:nth-child(4) {
+							width: 150px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width:1025px) {
+	table {
+		thead {
+			font-size: 18px;
+		}
+		tbody {
+			strong {
+				font-size: 18px;
+			}
+		}
+		th {
+			padding: 10px 15px;
+		}
+		td {
+			font-size: 16px;
+		}
+	}
+	.table {
+		&__name {
+			font-size: 26px;
+		}
+		&__wrap {
+			margin-bottom: 50px;
+		}
+		&__services {
+			thead {
+				tr {
+					th {
+						&:nth-child(1) {
+							width: 50px; 
+						}
+						&:nth-child(2) {
+							
+						}
+						&:nth-child(3) {
+							width: 170px;
+						}
+						&:nth-child(4) {
+							width: 130px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+

@@ -2,7 +2,7 @@
 	height: 60px;
 	position: absolute;
 	z-index: 100;
-	padding-left: 295px;
+	padding-left: 285px;
 	color: white;
 	font-size: 20px;
 	min-height: 60px;
@@ -16,25 +16,34 @@
 	&__item, .menu-item {
 		position: relative;
 		display: block;
-		transition: 0.2s all;
+		transition: .3s all;
+		background: rgba(26, 36, 60, 0);
+		border-radius: 2px 2px 0 0;
 		a {
 			color: white;
 			text-decoration: none;
 			display: block;
-			padding: 0 47px 0 20px;
+			padding: 0 30px 0 30px;
 			cursor: pointer;
 			text-transform: uppercase;
 			white-space: nowrap;
 			height: 60px;
 			line-height: 60px;
+			transition: 0.2s all;
 			
 			&:after {
 				content: "\F140";
 				font-family: "Material Design Icons";
 				transition: 0.2s all;
-				display: inline-block;
+				display: none;
 				margin-left: 3px;
 
+			}
+			&.after {
+				&:after {
+					display: inline-block;
+					animation: vizible-left  .5s;
+				}
 			}
 		}
 		&:hover {
@@ -53,6 +62,7 @@
 			.top-menu__sublist, .sub-menu {
 				left: auto;
 				right: 0;
+				border-radius: 2px 0 2px 2px;
 			}
 		}
 	}
@@ -66,6 +76,7 @@
 		left: 0;
 		background: rgba(26, 36, 60, 0.9);
 		animation: vizible  .3s;
+		border-radius: 0 2px 2px 2px;
 		
 	}
 	&__subitem, .sub-menu > .menu-item {
@@ -76,7 +87,7 @@
 			color: white;
 			text-decoration: none;
 			display: block;
-			padding: 13px 20px;
+			padding: 13px 30px; 
 			cursor: pointer;
 			text-transform: uppercase;
 			line-height: 1.2;
