@@ -1,0 +1,140 @@
+.k-select {
+	position: relative;
+	margin-bottom: 15px;
+	&__dropbox {
+		position: absolute;
+		// border: 1px solid transparent;
+		border: none;
+		box-sizing: border-box;
+		top: calc(~'100% + 2px');
+		left: 0px;
+		right: 0px;
+		background: white;
+		padding: 0; 
+		z-index: 100;
+		box-shadow: 0px 7px 29px 0px rgba(0, 0, 0, 0.2);
+		display: none;
+		max-height: 300px;
+		overflow: auto;
+		border-radius: 0 0 3px 3px;
+
+		&.active {
+			display: block;
+			animation: vizible  .3s;
+		}
+	}
+	sup {
+		position: relative;
+		top: -1px;
+		left: 2px;
+		color: #dd0707;
+		font-size: 15px;
+		line-height: 0;
+	}
+	.mdi-chevron-down {
+		position: absolute;
+		right: 7px;
+		top: 0;
+		font-size: 24px;
+		color: #9fa9ad;
+		height: 100%;
+		cursor: pointer;
+		transition: all 0.2s;
+		display: flex;
+		align-items: center;
+	}
+
+	&.active {
+		.mdi-chevron-down {
+			transform: rotate(180deg);
+		}
+		.k-select__input {
+			border-radius: 3px 3px 0 0;
+		}
+	}
+	&__title {
+		position: absolute;
+		color: #adadad;
+		font-size: 12px;
+		font-family: 'azbuka';
+		white-space: nowrap;
+		font-weight: 700;
+		top: 10px;
+		left: 13px;
+        &-bg {
+            background-color: #fff;
+            top: 0px;
+            left: 1px;
+            right: 18px;
+            padding: 9px 12px 6px 12px;
+            border-top: 1px solid @red;
+        }
+	}
+	&__item {
+		padding: 10px @sp 10px 38px;
+		line-height: 1;
+		font-size: 20px;
+		color: black;
+		transition: all 0.2s;
+		cursor: pointer;
+		margin-top: 0;
+
+		
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:hover {
+			color: @red;
+			background: #f8f6f7;
+		}
+		&.active {
+			background: #efefef;
+    		color: @red;
+    		position: relative;
+    		&:before {
+				content: "\F12C";
+				font-family: "Material Design Icons";
+				position: absolute;
+				left: 9px;
+				font-size: 21px;
+				top: 10px;
+			}
+		}
+	}
+	&__input {
+		background: #edf6fd;
+		padding: 25px 30px;
+		text-overflow: ellipsis;
+		padding-right: 40px;
+		width: 100%;
+		box-sizing: border-box;
+		outline: none;
+		font-size: 24px;
+		border: none;
+		white-space: nowrap; 
+		flex: 1;
+		border-radius: 3px;
+		
+
+		&.active {
+			box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.14);
+		}
+		&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		  font-size: 24px;
+		}
+		&::-moz-placeholder { /* Firefox 19+ */
+		  font-size: 24px;
+		}
+		&:-ms-input-placeholder { /* IE 10+ */
+		  font-size: 24px;
+		}
+		&:-moz-placeholder { /* Firefox 18- */ 
+		  font-size: 24px; 
+		}
+	
+	}
+}
