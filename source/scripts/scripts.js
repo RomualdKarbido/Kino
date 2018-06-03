@@ -10,6 +10,20 @@ $(document).ready(function() {
 		}
 	});
 
+	//прилипание верхнего меню
+
+	$(window).scroll(function() { 
+		var topMenu = window.pageYOffset;
+		// console.log(topMenu);
+		if (topMenu >= 155 && $(window).width()  > 1025) {
+			$('.top-menu').addClass('top');
+			$('.header__black').addClass('top');
+		}
+		else {
+			$('.top-menu').removeClass('top');
+			$('.header__black').removeClass('top');
+		}
+	});
 
 	//картинка для партнерского блока
 
@@ -29,10 +43,10 @@ $(document).ready(function() {
 			$('.partners-block__img').css({'left': - imgMargin});
 		}	
 	};
-	pb();
 	$(window).resize(function() { 
 		pb();
 	});
+	pb();
 
 	
 	//фильтрация букв в коллециях
@@ -46,7 +60,15 @@ $(document).ready(function() {
 				for(var i=0; i<data.length; i++){
 					var valueField = data[i].name[0];
 					if (valueField == LetterID) {
-						$('.filter-az__list').append('<li>'  + data[i].name + '</li>');
+						
+						if (data[i].time != undefined) {
+							
+							$('.filter-az__list').append('<li>' + data[i].name + '<span>' + data[i].time + ' год</span>' + '</li>');
+						}
+						else {
+							 $('.filter-az__list').append('<li>' + data[i].name + '</li>');
+							
+						}
 					}
 				}  
 			});
@@ -149,6 +171,13 @@ $(document).ready(function() {
 				});
 			}
 		});
+
+	});
+
+	//запрет ввода в поле слекта
+	$('.k-select .k-select__input').keydown(function(e){
+	  console.log(e.key);
+	  e.preventDefault()
 	});
 
 

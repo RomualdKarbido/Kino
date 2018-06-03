@@ -10,7 +10,7 @@
 		box-shadow: inset 0px 0px 3px #0a0a0a40;
 	}
 	&__item {
-		padding: 5px;
+		padding: 4.3px;
 		border: 1px solid gray;
 		width: 30px;
 		height: 30px;
@@ -32,8 +32,9 @@
 	}
 	
 	&__list {
-		min-height: 30px;
+		min-height: 30px; 
 		margin-top: 40px;
+		min-width: 600px; 
 		// flex: 1;
 		li {
 			border-bottom: 1px dotted #bdbdbd;
@@ -41,6 +42,21 @@
 			font-size: 26px;
 			padding: 10px 0px;
 			line-height: 1;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			span {
+				font-size: 14px;
+				margin-left: 150px;
+				background: @blue;
+				color: white;
+				padding: 7px 10px;
+				border-radius: 20px;
+				display: block;
+				box-sizing: border-box;
+				white-space: nowrap;
+				width: 76px;
+			}
 		}
 		&-block {
 			display: flex;
@@ -54,6 +70,7 @@
 			position: relative;
 			top: 25px;
 			width: 150px;
+			color: @blue;
 		}
 	}
 	&__switch {
@@ -96,10 +113,14 @@
 	}
 }
 @media (max-width: 1024px) {
-	.filter-az__top {
-		padding: 30px 40px;
-
-		
+	.filter-az {
+		&__top {
+			padding: 30px 40px;
+		}
+		&__list {
+			width: 100%;
+			min-width: auto;
+		}
 		
 	}
 }
@@ -110,42 +131,47 @@
 		
 		
 	}
-}@media (max-width: 767px) {
-	.filter-az {
-		justify-content: center;
-		&__item {
-			margin-left: 5px;
-			margin-right: 5px;
-		}
-		&__list {
-			margin-top: 0;
-			&-block {
-				display: flex;
-				flex-direction: column;	
-				justify-content: center;
+	}@media (max-width: 767px) {
+		.filter-az {
+			justify-content: center;
+			&__item {
+				margin-left: 5px;
+				margin-right: 5px;
 			}
-			&-big {
-				font-size: 120px;
-				margin-bottom: 15px;
-				width: 100%;
-				text-align: center;
-				margin-right: 0;
-				top: 0;
-			}	
-		}
-		&__switch {
-			&-wrap {
-				justify-content: center;
+			&__list {
+				margin-top: 0;
+				&-block {
+					display: flex;
+					flex-direction: column;	
+					justify-content: center;
+				}
+				&-big {
+					font-size: 120px;
+					margin-bottom: 15px;
+					width: 100%;
+					text-align: center;
+					margin-right: 0;
+					top: 0;
+				}
+				li {
+					span {
+						margin-left: 20px;
+					}
+				}	
 			}
-		}
-		&__top {
-			padding: 30px 20px;
+			&__switch {
+				&-wrap {
+					justify-content: center;
+				}
+			}
+			&__top {
+				padding: 30px 20px;
 
-			
-			
+
+
+			}
 		}
 	}
-}
 
 
 
