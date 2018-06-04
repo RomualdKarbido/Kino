@@ -3,11 +3,16 @@
 	&.active {
 		display: flex;
 		flex-wrap: wrap;
+		
 	}
 	&__top {
 		padding: 30px 120px;
 		background: #f1f1f1;
 		box-shadow: inset 0px 0px 3px #0a0a0a40;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		flex-direction: column;
 	}
 	&__item {
 		padding: 4.3px;
@@ -41,10 +46,15 @@
 			width: 100%;
 			font-size: 26px;
 			padding: 10px 0px;
+			margin-left: 0 !important;
+			margin-bottom: 0 !important;
 			line-height: 1;
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+			&:before {
+				display: none !important;
+			}
 			span {
 				font-size: 14px;
 				margin-left: 150px;
@@ -61,6 +71,8 @@
 		&-block {
 			display: flex;
 			flex-wrap: wrap;
+			margin: 0 auto;
+			width: 950px;
 		}
 		&-big {
 			font-size: 160px;
@@ -74,7 +86,7 @@
 		}
 	}
 	&__switch {
-		margin-right: @sp*2;
+		margin: 0 @sp;
 		font-size: 30px;
 		border-bottom: 3px solid transparent;
 		cursor: pointer;
@@ -105,6 +117,23 @@
 			margin-top: 10px;
 			&-big {
 				top: 0;
+			}
+		}
+
+		
+		
+	}
+}
+@media (max-width: 1200px) {
+	.filter-az {
+		
+		
+		&__list {
+			margin-top: 10px;
+			&-block {
+				margin: auto;
+				width: auto;
+				flex-wrap: nowrap;
 			}
 		}
 

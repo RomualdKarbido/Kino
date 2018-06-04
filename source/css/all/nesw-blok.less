@@ -23,6 +23,7 @@
 			line-height: 1.1;
 			margin-bottom: 40px;
 			color: black;
+			font-weight: 700;
 		}
 		&-description {
 			font-size: 36px;
@@ -87,15 +88,17 @@
 					background: white;
 					flex: 0 0 40%;
 					&-wrap {
-						padding: 0 120px;
+						padding: 0 120px; 
 					}
 				}
 				&-title {
 					margin-top: 50px;
-					font-size: 50px;
+					font-size: 45px;
+					overflow: hidden;
+					max-height: 200px;
 				}
 				&-description {
-					font-size: 25px;
+					font-size: 25px; 
 				}
 			}
 			&__tiles {
@@ -104,6 +107,38 @@
 			}
 		}
 	}
+}
+@media (max-width: 1400px) {
+
+	.nesw-block_alt {
+		background: white;
+		.nesw-block {
+			&__top {
+				
+				&-info{
+					
+					&-wrap {
+						padding: 45px;
+
+					}
+				}
+				&-title {
+					margin-top: 0;
+					margin-bottom: 40px;
+					font-size: 34px;
+				}
+				
+				&-description {
+					margin-bottom: 30px;
+					font-size: 24px;
+				}
+				
+			}
+			
+			
+		}
+	} 
+	
 }
 @media (max-width: 1024px) {
 
@@ -128,6 +163,7 @@
 				&-title {
 					margin-top: 0;
 					margin-bottom: 15px;
+					font-size: 45px;
 				}
 				&-img {
 					width: auto;
@@ -135,10 +171,11 @@
 					margin: 0 40px;
 					width: calc(~'100vw - 80px');
 					padding-bottom: calc(~'65% - 80px'); 
-					box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.33);
+					box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.33); 
 				}
 				&-description {
 					margin-bottom: 30px;
+					font-size: 25px; 
 				}
 				
 			}
@@ -149,7 +186,7 @@
 			&__tile {
 				width: calc(~'(100% - 20px) / 2');
 				min-width: calc(~'(100% - 20px) / 2');
-				padding-top: calc(~'(75% - 20px) / 2');
+				padding-top: calc(~'(75% - 20px) / 2'); 
 				margin-bottom: 20px;
 			}
 		}

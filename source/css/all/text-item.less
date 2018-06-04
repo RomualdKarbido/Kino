@@ -41,6 +41,13 @@
 		font-weight: 700;
 		margin-top: 50px;
 	}
+	h4 {
+		font-size: 30px;
+		line-height: 1.2;
+		margin-bottom: 20px;
+		font-weight: 700;
+		
+	}
 	p {
 		font-size: 24px;
 		line-height: 1.2;
@@ -56,8 +63,15 @@
 		}
 	}
 	ul {
+		margin-bottom: 20px;
 		li {
-
+			position: relative;
+			margin-left: 20px;
+			&:before {
+				content: '- ';
+				position: absolute;
+				left: -17px;
+			}
 		}
 	}
 	a {

@@ -1131,6 +1131,7 @@ sup {
   line-height: 1.1;
   margin-bottom: 40px;
   color: black;
+  font-weight: 700;
 }
 .nesw-block__top-description {
   font-size: 36px;
@@ -1203,7 +1204,9 @@ sup {
 }
 .nesw-block_alt .nesw-block__top-title {
   margin-top: 50px;
-  font-size: 50px;
+  font-size: 45px;
+  overflow: hidden;
+  max-height: 200px;
 }
 .nesw-block_alt .nesw-block__top-description {
   font-size: 25px;
@@ -1211,6 +1214,23 @@ sup {
 .nesw-block_alt .nesw-block__tiles {
   padding-left: 40px;
   padding-right: 40px;
+}
+@media (max-width: 1400px) {
+  .nesw-block_alt {
+    background: white;
+  }
+  .nesw-block_alt .nesw-block__top-info-wrap {
+    padding: 45px;
+  }
+  .nesw-block_alt .nesw-block__top-title {
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-size: 34px;
+  }
+  .nesw-block_alt .nesw-block__top-description {
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
 }
 @media (max-width: 1024px) {
   .nesw-block_alt {
@@ -1234,6 +1254,7 @@ sup {
   .nesw-block_alt .nesw-block__top-title {
     margin-top: 0;
     margin-bottom: 15px;
+    font-size: 45px;
   }
   .nesw-block_alt .nesw-block__top-img {
     width: auto;
@@ -1245,6 +1266,7 @@ sup {
   }
   .nesw-block_alt .nesw-block__top-description {
     margin-bottom: 30px;
+    font-size: 25px;
   }
   .nesw-block_alt .nesw-block__tiles {
     -ms-flex-wrap: wrap;
@@ -1638,6 +1660,12 @@ sup {
   font-weight: 700;
   margin-top: 50px;
 }
+.content h4 {
+  font-size: 30px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
 .content p {
   font-size: 24px;
   line-height: 1.2;
@@ -1649,6 +1677,18 @@ sup {
 .content ol li {
   margin-left: 20px;
   margin-bottom: 20px;
+}
+.content ul {
+  margin-bottom: 20px;
+}
+.content ul li {
+  position: relative;
+  margin-left: 20px;
+}
+.content ul li:before {
+  content: '- ';
+  position: absolute;
+  left: -17px;
 }
 .content a {
   color: #264157;
@@ -2257,6 +2297,19 @@ sup {
   padding: 30px 120px;
   background: #f1f1f1;
   box-shadow: inset 0px 0px 3px #0a0a0a40;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .filter-az__item {
   padding: 4.3px;
@@ -2289,6 +2342,8 @@ sup {
   width: 100%;
   font-size: 26px;
   padding: 10px 0px;
+  margin-left: 0 !important;
+  margin-bottom: 0 !important;
   line-height: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2299,6 +2354,9 @@ sup {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.filter-az__list li:before {
+  display: none !important;
 }
 .filter-az__list li span {
   font-size: 14px;
@@ -2318,6 +2376,8 @@ sup {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: 0 auto;
+  width: 950px;
 }
 .filter-az__list-big {
   font-size: 160px;
@@ -2330,7 +2390,7 @@ sup {
   color: #1a243c;
 }
 .filter-az__switch {
-  margin-right: 30px;
+  margin: 0 15px;
   font-size: 30px;
   border-bottom: 3px solid transparent;
   cursor: pointer;
@@ -2359,6 +2419,17 @@ sup {
   }
   .filter-az__list-big {
     top: 0;
+  }
+}
+@media (max-width: 1200px) {
+  .filter-az__list {
+    margin-top: 10px;
+  }
+  .filter-az__list-block {
+    margin: auto;
+    width: auto;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
 }
 @media (max-width: 1024px) {
@@ -3018,4 +3089,27 @@ table td ul li:before {
 .k-select__input:-moz-placeholder {
   /* Firefox 18- */
   font-size: 24px;
+}
+.error-page {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.error-page__letter {
+  font-size: 350px;
+  text-align: center;
+  font-weight: 900;
+}
+.error-page .serch-page {
+  margin-top: 40px;
+}
+@media (max-width: 600px) {
+  .error-page__letter {
+    font-size: 200px;
+  }
+}
+@media (max-width: 400px) {
+  .error-page__letter {
+    font-size: 160px;
+  }
 }
