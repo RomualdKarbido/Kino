@@ -53,30 +53,76 @@ $(document).ready(function() {
 
 	$('.filter-az__item').click(function(){
 		var LetterID = $(this).html();
-		$(".filter-az__list, .filter-az__list-big").empty();
+		$(".filter-az__list, .filter-az__list-big, .filter-az__message").empty();
+		$('.filter-az__list-big').addClass('active');
 		$('.filter-az__list-big').html(LetterID);
 		$(function(){
 			$.getJSON('../scripts/list.json', function(data) {
-				for(var i=0; i<data.length; i++){
-					var valueField = data[i].name[0];
-					if (valueField == LetterID) {
-						
-						if (data[i].time != undefined) {
-							
-							$('.filter-az__list').append('<li>' + data[i].name + '<span>' + data[i].time + ' год</span>' + '</li>');
-						}
-						else {
-							 $('.filter-az__list').append('<li>' + data[i].name + '</li>');
-							
-						}
+				var filteredItems = data.filter(function(item) {
+					return item.name.toUpperCase().indexOf(LetterID.toUpperCase()) == 0;
+				});
+				
+				for(var i = 0; i < filteredItems.length; i++)
+				{
+					if (filteredItems[i].time != undefined) {
+						$('.filter-az__list').append('<li>' + filteredItems[i].name + '<span>' + filteredItems[i].time + ' год</span>' + '</li>');
 					}
-				}  
+					else {
+						$('.filter-az__list').append('<li>' + filteredItems[i].name + '</li>');
+
+					}
+				}
 			});
 		});
-		var destination = $('.content_letter').offset().top;
-		$('html, body').animate({ scrollTop: destination }, 1100);
+		if ($(window).width()  < 768) {
+			var destination = $('.content_letter').offset().top;
+			$('html, body').animate({ scrollTop: destination }, 1100);
+		}
+	});
+
+
+	//поиск по фильмам
+	function search(){
+		var SearchAB = $('.filter-az__input').val();
+		$(".filter-az__list, .filter-az__list-big, .filter-az__message").empty();
+		$('.filter-az__list-big').removeClass('active');
+
+		if (SearchAB.length > 2) {
+			$(function(){
+				$.getJSON('../scripts/list.json', function(data) {
+					var filteredItems = data.filter(function(item) {
+						return item.name.toUpperCase().indexOf(SearchAB.toUpperCase())   >= 0; 
+					});
+					for(var i = 0; i < filteredItems.length; i++) {
+						$('.filter-az__list').append('<li><span class="filter-az__num">' + [i+1] + ' -  </span>'  + filteredItems[i].name + '</li>');
+					}
+					if (filteredItems.length == 0) {
+						$('.filter-az__message').text('Ничего не найдено');
+					}
+				});
+			});
+			if ($(window).width()  < 768) {
+				var destination = $('.content_letter').offset().top;
+				$('html, body').animate({ scrollTop: destination }, 1100);
+			}
+
+		}
+		else {
+			$('.filter-az__message').text('Введите больше трех симоволов');
+		}
+
+	};
+
+
+	$('.filter-az__search').click(function(){
+		search();
 	});
 	
+	$(".filter-az__input").keyup(function(event){
+	    if(event.keyCode == 13){
+	        search();
+	    }
+	});
 	
 
 	$('.filter-az__switch').click(function(){
@@ -176,8 +222,8 @@ $(document).ready(function() {
 
 	//запрет ввода в поле слекта
 	$('.k-select .k-select__input').keydown(function(e){
-	  console.log(e.key);
-	  e.preventDefault()
+		console.log(e.key);
+		e.preventDefault()
 	});
 
 

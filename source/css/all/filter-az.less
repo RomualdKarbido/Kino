@@ -1,5 +1,8 @@
 .filter-az {
 	display: none;
+	width: 950px;
+	margin: 0 auto ;
+
 	&.active {
 		display: flex;
 		flex-wrap: wrap;
@@ -35,43 +38,84 @@
 			opacity: 1;
 		}
 	}
-	
+	&__input {
+		flex:1;
+		margin-right: 15px;
+		font-size: 18px;
+		padding:  15px;
+		outline: none;
+		border: 1px solid gray;
+		border-radius: 3px; 
+		padding: 15px;
+		&-wrap {
+			margin: 0 auto;
+			width: 950px;
+			display: flex;
+
+
+		}
+	}
+	&__search {
+		background: @blue;
+		color: white;
+		cursor: pointer;
+		border: none;
+		border-radius: 3px;
+		box-sizing: border-box;
+		padding: 15px 30px;
+		&:hover {
+			color: white;
+			background: @red;
+			border: none;
+		}
+	}
+	&__message {
+		margin: 15px auto;
+		width: 950px;
+		font-size: 18px; 
+	}
+	&__num {
+		background: lighten(@blue, 10%);
+		color: white;
+		padding: 5px;
+		border-radius: 6px;
+		display: block;
+		box-sizing: border-box;
+		white-space: nowrap;
+		margin-right: 20px;
+		min-width: 30px; 
+		text-align: center;
+		font-size: 14px; 
+	}
 	&__list {
 		min-height: 30px; 
 		margin-top: 40px;
-		min-width: 600px; 
+		width: 100%; 
 		// flex: 1;
 		li {
 			border-bottom: 1px dotted #bdbdbd;
 			width: 100%;
-			font-size: 26px;
-			padding: 10px 0px;
+			font-size: 24px;
+			padding: 17px 0px;
 			margin-left: 0 !important;
 			margin-bottom: 0 !important;
-			line-height: 1;
+			line-height: 1.3;
 			display: flex;
-			align-items: center;
-			justify-content: space-between;
+			align-items: flex-start;
+
+			// justify-content: space-between;
+			
 			&:before {
 				display: none !important;
 			}
 			span {
-				font-size: 14px;
-				margin-left: 150px;
-				background: @blue;
-				color: white;
-				padding: 7px 10px;
-				border-radius: 20px;
-				display: block;
-				box-sizing: border-box;
-				white-space: nowrap;
-				width: 76px;
+				
 			}
 		}
 		&-block {
 			display: flex;
-			flex-wrap: wrap;
-			margin: 0 auto;
+			flex-wrap: nowrap;
+			margin: 20px auto 0;
 			width: 950px;
 		}
 		&-big {
@@ -83,6 +127,10 @@
 			top: 25px;
 			width: 150px;
 			color: @blue;
+			display: none;
+			&.active {
+				display: block;
+			}
 		}
 	}
 	&__switch {
@@ -126,8 +174,7 @@
 }
 @media (max-width: 1200px) {
 	.filter-az {
-		
-		
+		width: 100%;
 		&__list {
 			margin-top: 10px;
 			&-block {
@@ -136,12 +183,17 @@
 				flex-wrap: nowrap;
 			}
 		}
-
-		
-		
+		&__input {
+			&-wrap {
+				width: 100%;
+			}
+		}
+		&__message {
+			width: 100%;
+		}
 	}
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
 	.filter-az {
 		&__top {
 			padding: 30px 40px;
@@ -150,6 +202,7 @@
 			width: 100%;
 			min-width: auto;
 		}
+		
 		
 	}
 }
@@ -160,47 +213,73 @@
 		
 		
 	}
-	}@media (max-width: 767px) {
-		.filter-az {
-			justify-content: center;
-			&__item {
-				margin-left: 5px;
-				margin-right: 5px;
+}
+@media (max-width: 767px) {
+	.filter-az {
+		justify-content: center;
+		&__item {
+			margin-left: 5px;
+			margin-right: 5px;
+		}
+		&__list {
+			margin-top: 0;
+			&-block {
+				display: flex;
+				flex-direction: column;	
+				justify-content: center;
 			}
-			&__list {
-				margin-top: 0;
-				&-block {
-					display: flex;
-					flex-direction: column;	
-					justify-content: center;
-				}
-				&-big {
-					font-size: 120px;
-					margin-bottom: 15px;
-					width: 100%;
-					text-align: center;
-					margin-right: 0;
-					top: 0;
-				}
-				li {
-					span {
-						margin-left: 20px;
-					}
-				}	
+			&-big {
+				font-size: 120px;
+				margin-bottom: 15px;
+				width: 100%;
+				text-align: center;
+				margin-right: 0;
+				top: 0;
 			}
-			&__switch {
-				&-wrap {
-					justify-content: center;
+			li {
+				span {
+					margin-left: 20px;
 				}
-			}
-			&__top {
-				padding: 30px 20px;
-
-
-
+			}	
+		}
+		&__switch {
+			&-wrap {
+				justify-content: center;
 			}
 		}
+		&__top {
+			padding: 30px 20px;
+
+
+
+		}
 	}
+}
+@media (max-width: 450px) {
+	.filter-az {
+		&__input {
+			margin: 0 0 15px 0;
+
+			&-wrap {
+				flex-direction: column;
+			}
+		}
+		&__search {
+			width: 100%;
+			text-align: center;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

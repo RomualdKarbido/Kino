@@ -246,6 +246,5 @@ function initMap() {
 
 }
 
-
-
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAt0dAMGtlEB-48KGNLMBxabXm7Jf1stsU&callback=initMap" async defer>
 
