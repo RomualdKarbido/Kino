@@ -3,7 +3,7 @@ $(document).ready(function() {
 		$('.top-menu__list').toggleClass('active');
 		$('.body').toggleClass('menu');
 	});
-	
+
 	$( ".menu-item" ).each(function( index ) {
 		if($(this).children('ul').length > 0) {
 			$(this).children('a').addClass('after');
@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 	//прилипание верхнего меню
 
-	$(window).scroll(function() { 
+	$(window).scroll(function() {
 		var topMenu = window.pageYOffset;
 		// console.log(topMenu);
 		if (topMenu >= 155 && $(window).width()  > 1025) {
@@ -30,25 +30,25 @@ $(document).ready(function() {
 	function pb (){
 		if ($('.partners-block__img').height() <= 430) {
 			$('.partners-block__img').addClass('active');
-		}		
-		
+		}
+
 		var imgSize = ($('.partners-block__img').width());
 
 
 		if ($(window).width() >= imgSize) {
 			$('.partners-block__img').removeClass('active');
-		}	
+		}
 		else {
-			var imgMargin = (imgSize - $(window).width()) / 2; 
+			var imgMargin = (imgSize - $(window).width()) / 2;
 			$('.partners-block__img').css({'left': - imgMargin});
-		}	
+		}
 	};
-	$(window).resize(function() { 
+	$(window).resize(function() {
 		pb();
 	});
 	pb();
 
-	
+
 	//фильтрация букв в коллециях
 
 	$('.filter-az__item').click(function(){
@@ -61,7 +61,7 @@ $(document).ready(function() {
 				var filteredItems = data.filter(function(item) {
 					return item.name.toUpperCase().indexOf(LetterID.toUpperCase()) == 0;
 				});
-				
+
 				for(var i = 0; i < filteredItems.length; i++)
 				{
 					if (filteredItems[i].time != undefined) {
@@ -91,7 +91,7 @@ $(document).ready(function() {
 			$(function(){
 				$.getJSON('../scripts/list.json', function(data) {
 					var filteredItems = data.filter(function(item) {
-						return item.name.toUpperCase().indexOf(SearchAB.toUpperCase())   >= 0; 
+						return item.name.toUpperCase().indexOf(SearchAB.toUpperCase())   >= 0;
 					});
 					for(var i = 0; i < filteredItems.length; i++) {
 						$('.filter-az__list').append('<li><span class="filter-az__num">' + [i+1] + ' -  </span>'  + filteredItems[i].name + '</li>');
@@ -117,13 +117,13 @@ $(document).ready(function() {
 	$('.filter-az__search').click(function(){
 		search();
 	});
-	
+
 	$(".filter-az__input").keyup(function(event){
 	    if(event.keyCode == 13){
 	        search();
 	    }
 	});
-	
+
 
 	$('.filter-az__switch').click(function(){
 		$('.filter-az__switch').removeClass('active');
@@ -131,7 +131,7 @@ $(document).ready(function() {
 		if ($('#en').hasClass('active')) {
 			$('.filter-az').removeClass('active');
 			$('.filter-az_en').addClass('active');
-		} 
+		}
 		if ($('#rus').hasClass('active')) {
 			$('.filter-az').removeClass('active');
 			$('.filter-az_rus').addClass('active');
@@ -162,7 +162,7 @@ $(document).ready(function() {
 			$container.find('.k-select__dropbox').toggleClass('active');
 			$container.toggleClass('active');
 		});
-		
+
 		$('.k-select__item').click(function() {
 			var $container = $(this).closest(".k-select");
 			if ($(this).hasClass('active')) {
@@ -172,11 +172,10 @@ $(document).ready(function() {
 				$container.find('.k-select__item').removeClass('active');
 				$(this).addClass('active');
 			}
-			
+
 			var secletedText = $container.find('.k-select__item.active').text();
 			$container.find('.k-select__input').val(secletedText);
 
-			
 
 			//выводим значение выбраного элемента в скрытый блок
 			var selectID = $(this).closest('.k-select').attr('id');
@@ -186,20 +185,15 @@ $(document).ready(function() {
 			else {
 				$('#hidden-2').val(secletedText);
 			}
-			
 
 
 			$container.find('.k-select__dropbox').removeClass('active');
 			$container.removeClass('active');
 
-			
-			
 		});
 	}
-	
 
 	initCustomSelectControls();
-
 
 	//выбор подслелекта
 	$('#s1').click(function() {
@@ -225,9 +219,4 @@ $(document).ready(function() {
 		console.log(e.key);
 		e.preventDefault()
 	});
-
-
-
-
-	
 });

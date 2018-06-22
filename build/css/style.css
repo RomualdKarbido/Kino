@@ -3095,6 +3095,7 @@ table td ul li:before {
   transition: all 0.2s;
   cursor: pointer;
   margin-top: 0;
+  border: red 2px solid;
 }
 .k-select__item:last-child {
   margin-bottom: 0;
