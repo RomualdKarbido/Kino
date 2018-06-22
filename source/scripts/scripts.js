@@ -185,11 +185,8 @@ $(document).ready(function() {
 			else {
 				$('#hidden-2').val(secletedText);
 			}
-
-
 			$container.find('.k-select__dropbox').removeClass('active');
 			$container.removeClass('active');
-
 		});
 	}
 
